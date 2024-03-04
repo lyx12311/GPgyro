@@ -11,6 +11,7 @@ This is an example code to calculate the gyrochronology age for a star using its
    - `arviz`, version 0.15.1
    - `corner`, version 2.2.2
    - `pandas`, version 1.4.4
+   - `tqdm`, version 4.64.1
   
 ## To use the package, do:
 ```
