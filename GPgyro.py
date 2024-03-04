@@ -2,7 +2,7 @@ import jax
 import numpy as np
 import jax.numpy as jnp
 from tinygp import kernels
-
+import pandas as pd
 
 import jaxopt
 from tinygp import GaussianProcess, kernels, transforms
