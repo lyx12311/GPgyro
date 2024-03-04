@@ -22,6 +22,7 @@ MG = [5, 10, 7] # list of absolute Gaia magnitude
 
 # create the input list, make sure periods are in log10 scale
 X_k = np.array([teffs, np.log10(prots)]).T
+MG = np.array(MG)
 
 # calculate gyrochronology age for these stars
 age, age_m, age_p = GP_gyro(X_k, MG.T)
