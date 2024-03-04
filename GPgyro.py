@@ -3,6 +3,7 @@ import numpy as np
 import jax.numpy as jnp
 from tinygp import kernels
 import pandas as pd
+from tqdm import trange
 
 import jaxopt
 from tinygp import GaussianProcess, kernels, transforms
@@ -11,6 +12,11 @@ import arviz as az
 import corner
 
 path_to_files = './'
+
+def fitpoints(x,y,order=1):
+    z = np.polyfit(x,y,order)
+    p = np.poly1d(z)
+    return p
 
 def mean_function_both(params, X):
     # Prot broken low
