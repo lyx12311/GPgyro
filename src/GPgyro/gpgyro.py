@@ -1,17 +1,18 @@
 import jax
 import numpy as np
 import jax.numpy as jnp
-from tinygp import kernels
 import pandas as pd
+from tinygp import GaussianProcess, kernels, transforms
 from tqdm import trange
 
-import jaxopt
-from tinygp import GaussianProcess, kernels, transforms
 from functools import partial
 import arviz as az
 import corner
 
-path_to_files = './'
+import os
+_ROOT = os.path.abspath(os.path.dirname(__file__))
+path_to_files = _ROOT + "/data/"
+
 
 def fitpoints(x,y,order=1):
     z = np.polyfit(x,y,order)
@@ -140,7 +141,7 @@ def GP_gyro_PC(X, sample, filepath=path_to_files):
 sample_FC = pd.DataFrame(sample_FC.T, columns=allkeys_fc)
 sample_FC = sample_FC.sample(n=100)
 
-def GP_gyro_FC(X, sample):
+def GP_gyro_FC(X, sample, filepath=path_to_files):
     X_t = np.load(filepath+'X_fc.npy')
     y_t = np.load(filepath+'yerr_fc.npy')
     y = np.load(filepath+'y_fc.npy')
