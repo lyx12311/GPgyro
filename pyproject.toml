@@ -1,0 +1,25 @@
+[project]
+name = "gpgyro"
+description = "A lightweight gaussian process gyrochronology code"
+authors = [{ name = "Lucy Lu", email = "lucylulu12311@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.0.1"
+license = { text = "MIT License" }
+dependencies = [
+    "jax>=0.4.8",
+    "numpy>=1.21.5",
+    "tinygp>=0.2.3",
+    "arviz>=0.15.1",
+    "corner>=2.2.2",
+    "pandas>=1.4.4",
+    "tqdm>=4.64.1"
+]
+
+[project.urls]
+"Source" = "https://github.com/lyx12311/GPgyro"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
