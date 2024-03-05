@@ -1,17 +1,11 @@
-# GPgyro
+# gpgyro
 This is an example code to calculate the gyrochronology age for a star using its temperature and rotation period measurements.
 
 ## Installation/Setup
-1. Download all `.npy` and `GPgyro.np` files
-2. Open `GPgyro.np` and change `path_to_files` to the path to all `.npy` files (default is `./`)
-3. Make sure the following packages are installed:
-   - `jax`, version 0.4.8
-   - `numpy`, version 1.21.5
-   - `tinygp`, version 0.2.3
-   - `arviz`, version 0.15.1
-   - `corner`, version 2.2.2
-   - `pandas`, version 1.4.4
-   - `tqdm`, version 4.64.1
+```
+git clone https://github.com/lyx12311/GPgyro.git (once this PR is merged)
+python -m pip install -e .
+```
   
 ## To use the package, do:
 ```
