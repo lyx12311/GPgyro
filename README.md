@@ -4,6 +4,7 @@ This is an example code to calculate the gyrochronology age for a star using its
 ## Installation/Setup
 ```
 git clone https://github.com/lyx12311/GPgyro.git (once this PR is merged)
+cd GPgyro
 python -m pip install -e .
 ```
   
