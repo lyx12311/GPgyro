@@ -3,14 +3,16 @@ This is an example code to calculate the gyrochronology age for a star using its
 
 ## Installation/Setup
 ```
-git clone https://github.com/lyx12311/GPgyro.git (once this PR is merged)
+git clone https://github.com/lyx12311/GPgyro.git
 cd GPgyro
 python -m pip install -e .
 ```
   
 ## To use the package, do:
-```
-from GPgyro import *
+```python
+from gpgyro import *
+import numpy as np
+
 # create a list of temperatures, periods, and absolute Gaia magnitude (The absolute Gaia magnitude is used to determine whether a star is partically convective or fully convective)
 teffs = [5000, 3000, 6000] # list of temperatures 
 prots = [20, 100, 15] # list of periods

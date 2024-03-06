@@ -8,8 +8,8 @@ from tqdm import trange
 from functools import partial
 import arviz as az
 import corner
-
 import os
+
 _ROOT = os.path.abspath(os.path.dirname(__file__))
 path_to_files = _ROOT + "/data/"
 
