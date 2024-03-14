@@ -1,5 +1,5 @@
 # gpgyro
-This is an example code to calculate the gyrochronology age for a star using its temperature and rotation period measurements.
+This is an example code to calculate the gyrochronology age for a star using its temperature and rotation period measurements. Orginal paper: https://ui.adsabs.harvard.edu/abs/2023arXiv231014990L/abstract.
 
 ## Installation/Setup
 ```
