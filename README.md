@@ -10,7 +10,7 @@ python -m pip install -e .
   
 ## To use the package, do:
 ```python
-from gpgyro import *
+from GPgyro import *
 import numpy as np
 
 # create a list of temperatures, periods, and absolute Gaia magnitude (The absolute Gaia magnitude is used to determine whether a star is partically convective or fully convective)
@@ -23,7 +23,7 @@ X_k = np.array([teffs, np.log10(prots)]).T
 MG = np.array(MG)
 
 # calculate gyrochronology age for these stars
-age, age_m, age_p = GP_gyro(X_k, MG.T)
+age, age_m, age_p = GPgyro.GP_gyro(X_k, MG.T)
 ```
 
 `age`, `age_m`, `age_p` are the ages, minus uncertainties, and plus uncertainties for these stars
