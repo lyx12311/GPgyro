@@ -26,4 +26,4 @@ MG = np.array(MG)
 age, age_m, age_p = GPgyro.GP_gyro(X_k, MG.T)
 ```
 
-`age`, `age_m`, `age_p` are the ages, minus uncertainties, and plus uncertainties for these stars
+`age`, `age_m`, `age_p` are the ages, minus uncertainties, and plus uncertainties for these stars. These uncertainties only take into account modeling uncertainty, and if measurement uncertainty is needed, we recommend performing boot-strapping within their measurement error.
