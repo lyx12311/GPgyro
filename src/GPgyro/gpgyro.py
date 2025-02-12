@@ -177,4 +177,4 @@ def GP_gyro(X, MG):
     
     ages_all[m_pc], ages_p_all[m_pc], ages_m_all[m_pc] = GP_gyro_PC(X[m_pc,:], sample_PC)
     ages_all[~m_pc], ages_p_all[~m_pc], ages_m_all[~m_pc] = GP_gyro_FC(X[~m_pc,:], sample_FC)
-    return ages_all, ages_m_all, ages_p_all
+    return ages_all, ages_p_all, ages_m_all
