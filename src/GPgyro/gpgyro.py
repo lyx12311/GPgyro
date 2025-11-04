@@ -130,11 +130,15 @@ def GP_gyro_PC(X, sample, filepath=path_to_files):
     ages_p = np.zeros(len(X))
     ages_m = np.zeros(len(X))
     for i in range(len(X)):
-        mcmc = np.percentile((outputage)[:, i][(outputage)[:, i]==(outputage)[:, i]], [16, 50, 84])
-        q = np.diff(mcmc)
-        ages[i] = mcmc[1]
-        ages_m[i] = -q[0]
-        ages_p[i] = q[1]
+        try:
+            mcmc = np.percentile((outputage)[:, i][(outputage)[:, i]==(outputage)[:, i]], [16, 50, 84])
+            q = np.diff(mcmc)
+            ages[i] = mcmc[1]
+            ages_m[i] = -q[0]
+            ages_p[i] = q[1]
+        except:
+            ages[i], ages_m[i], ages_p[i] = np.nan, np.nan, np.nan
+            print('cannot get age for teff=%.2f, prot=%.2f, PC model'%(X[i,0], X[i,1]))
     return ages, ages_m, ages_p
 
 
@@ -165,6 +169,7 @@ def GP_gyro_FC(X, sample, filepath=path_to_files):
             ages_p[i] = q[1]
         except:
             ages[i], ages_m[i], ages_p[i] = np.nan, np.nan, np.nan
+            print('cannot get age for teff=%.2f, prot=%.2f, PC model'%(X[i,0], X[i,1]))
     return ages, ages_m, ages_p
 
 
