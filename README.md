@@ -10,7 +10,7 @@ python -m pip install -e .
   
 ## To use the package, do:
 ```python
-from GPgyro import *
+import GPgyro
 import numpy as np
 
 # create a list of temperatures, periods, and absolute Gaia magnitude (The absolute Gaia magnitude is used to determine whether a star is partically convective or fully convective)
